@@ -10,7 +10,7 @@ script: docker buildx build
     --platform linux/amd64,linux/arm64
     --build-arg OCAML_VERSION=$OCAML_VERSION
     --build-arg UNISON_VERSION=$UNISON_VERSION
-    --tag eugenmayer/unison:$UNISON_VERSION-$OCAML_VERSION
+    --tag eugenmayer/unison:$UNISON_VERSION-$OCAML_VERSION .
 #     .
 
 # deploy:
