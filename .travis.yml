@@ -6,6 +6,9 @@ jobs:
     - env: OCAML_VERSION=4.12.0 UNISON_VERSION=2.51.3
     - env: OCAML_VERSION=4.12.0 UNISON_VERSION=2.51.4_rc2
 
+before_install:
+  - docker buildx create --use
+
 script: docker buildx build
     --platform linux/amd64,linux/arm64
     --build-arg OCAML_VERSION=$OCAML_VERSION
