@@ -8,7 +8,7 @@ jobs:
 
 before_install:
   - docker buildx create --use
-  - docker run --rm anycodings_docker --privileged tonistiigi/binfmt --install anycodings_docker arm64
+  - docker run --rm --privileged tonistiigi/binfmt --install arm64
 
 script: docker buildx build
     --platform linux/amd64,linux/arm64
